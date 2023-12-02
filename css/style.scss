@@ -1,0 +1,522 @@
+$hillcrest-blue: #26549b;
+
+$content-max-width: 1000px;
+$default-padding: 20px;
+
+$background-color-transition: 0.3s ease;
+$width-transition: 0.3s ease;
+$color-transition: 0.8s ease;
+$border-transition: 0.8s ease;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+* {
+    transition: background-color $background-color-transition,
+    color $color-transition, width $width-transition, border $border-transition;
+}
+
+/* Style the navigation bar */
+#nav-wrapper {
+    width: 100%;
+    background: $hillcrest-blue;
+    text-align: center;
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 1;
+}
+#main-nav {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: $content-max-width;
+}
+ul {
+    margin: 0 !important;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+
+#nav-wrapper.scrolled {
+    background-color: white;
+
+    .nav-link {
+        color: $hillcrest-blue;
+    }
+
+    .nav-link.active {
+        color: $hillcrest-blue;
+        .nav-links li {
+            background-color: white;
+        }
+    }
+
+    .nav-links li:hover {
+        background-color: $hillcrest-blue;
+        color: white;
+        cursor: pointer;
+        .nav-link {
+            color: white;
+        }
+    }
+
+}
+
+.nav-link.active {
+    color: white;
+    .nav-links li {
+        background-color: $hillcrest-blue;
+    }
+}
+
+
+.nav-links li {
+    display: inline-flex;
+    padding: 16px;
+    color: $hillcrest-blue;
+    text-decoration: none;
+
+}
+
+.nav-links li:hover {
+    background-color: white;
+    color: $hillcrest-blue;
+    cursor: pointer;
+
+    .nav-link {
+        color: $hillcrest-blue;
+    }
+}
+
+#logo-div {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+#hillcrest-logo-svg {
+    fill: white;
+}
+
+
+
+@media (max-width: 750px) {
+    .nav-links {
+        width: 100%;
+    }
+    .nav-links li {
+        display: none;
+    }
+
+    #contact-phone {
+        display: flex;
+    }
+}
+
+
+/* Home section */
+
+#home {
+    background-color: $hillcrest-blue;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+
+}
+
+#home-wrapper {
+    //width: 100%;
+    display: inline-flex;
+    max-width: $content-max-width;
+
+}
+#home-text {
+    width: 60%;
+    padding: $default-padding;
+}
+
+
+.typewriter h3 {
+    overflow: hidden;
+    border-right: .15em solid gray;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 10s steps(40, end), blink-caret .75s step-end, erase 2s steps(40, end) 2s;
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    50% { width: 100% }
+    100% { width: 0 }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: gray; }
+}
+
+
+#contact-form-wrapper {
+    width: 40%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: $default-padding;
+}
+
+#contact-form {
+    position: relative;
+    max-width: 300px;
+    color: $hillcrest-blue;
+    background-color: white;
+    //height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: $default-padding;
+}
+
+#contact-form-input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 $default-padding;
+}
+
+.contact-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid $hillcrest-blue;
+    outline: none;
+}
+
+@media (max-width: 750px) {
+    #home-text, #contact-form-wrapper {
+        width: 100%;
+    }
+    #home-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* About section */
+
+#about {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $hillcrest-blue;
+    overflow: hidden;
+    padding: $default-padding;
+}
+
+#about-wrapper {
+    width: 100%;
+    display: inline-flex;
+    max-width: $content-max-width;
+}
+
+#about-img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-img img {
+    max-width: 200px;
+    border-radius: 50%
+}
+
+#about-text {
+    width: 60%;
+}
+
+@media (max-width: 750px) {
+    #about-text, #about-img {
+        width: 100%;
+    }
+    #about-wrapper {
+        display: block;
+    }
+}
+/* Services section */
+
+#services {
+    background-color: $hillcrest-blue;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+    padding: $default-padding;
+}
+#services h1, #services h5 {
+    text-align: center;
+}
+
+#services-wrapper {
+    //width: 100%;
+    display: flex;
+    max-width: $content-max-width;
+}
+
+#services-container {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    background-color: white;
+    color: $hillcrest-blue;
+}
+
+.service img {
+    max-width: 100%;
+}
+
+.service h1 {
+    margin-bottom: 0;
+    font-size: larger;
+}
+
+.service p {
+    margin-top: 0;
+    padding: $default-padding;
+}
+
+@media (max-width: 650px) {
+    .service {
+        width: 100%;
+    }
+}
+
+/* Testimonials section */
+
+#testimonials {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $hillcrest-blue;
+    overflow: hidden;
+    padding: $default-padding;
+}
+
+#testimonials-wrapper {
+    display: block;
+    max-width: $content-max-width;
+}
+
+#testimonials h1, #testimonials h5 {
+    text-align: center;
+}
+
+#testimonials hr {
+    border-color: $hillcrest-blue;
+}
+
+#testimonials-container {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70vh;
+}
+
+.testimonial {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    background-color: $hillcrest-blue;
+    color: white;
+    display: none;
+}
+
+.testimonial.active {
+    display: flex;
+    animation: slide 0.5s linear;
+}
+.testimonial p {
+    padding: $default-padding;
+    font-style: italic;
+    font-size: larger;
+}
+
+.testimonial h1 {
+    margin-bottom: 0;
+    font-size: larger;
+}
+
+.testimonial h2 {
+    margin-top: 0;
+    font-size: smaller;
+    font-style: normal;
+}
+
+.testimonial h3, .testimonial h5 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#testimonial-controller {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-controller {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid $hillcrest-blue;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.testimonial-controller.active {
+    background-color: $hillcrest-blue;
+}
+
+@media (max-width: 650px) {
+    .testimonial {
+        width: 100%;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+/* Footer section */
+
+#footer {
+    background-color: $hillcrest-blue;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+    padding: $default-padding;
+}
+
+#footer-wrapper {
+    display: block;
+    max-width: $content-max-width;
+}
+
+#footer-text p a {
+    color: white;
+}
+
+
+
+
+
+/* Global styles */
+button, input[type="submit"] {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: $hillcrest-blue;
+}
+
+input[type="submit"].submit-button {
+    background-color: $hillcrest-blue;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.break-word {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.short-hr {
+    width: 10%;  /* Adjust as needed */
+    border: 0;
+    border-top: 3px solid #ffffff;
+    margin: 0 auto;  /* Center the hr */
+}

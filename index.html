@@ -1,10 +1,289 @@
 <!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-<h1>Hillcrest Renovation </h1>
-<h2>Under renovation...</h2>
-  </body>
+<html lang="en">
+<head>
+    <title>HillCrest Renovation</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="This is the description of the webpage!"/>
+    <meta name="keywords" content="keyword1, keyword2, keyword3, keyword4"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="author" content="DevMaus LLC"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div id="nav-wrapper">
+    <div id="main-nav">
+        <div id="logo-div">
+            <a href="index.html"><img
+                    id="logo-img"
+                    width="150px"
+                    src="images/hillcrest-logo-white.svg" alt="HillCrest Logo"/></a>
+        </div>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#services">Services</a></li>
+            <li><a class="nav-link" href="#testimonials">Clients</a></li>
+            <li id="contact-phone"><a class="nav-link" href="tel:+14259988254">📱 425-998-8254</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="home">
+    <div id="home-wrapper">
+        <div id="home-text">
+            <h3>What we can do?
+                <span class="typewrite" data-loop="yes" data-speed="100" data-delay="1000"
+                      data-words='[ "Kitchen Renovation",  "Restoration", "Insurance Claims", "Flooring",
+    "Bathroom Renovation", "Exterior Work"]'></span>
+            </h3>
+            <h1 id="home-text-h1">Let's create your dream space!</h1>
+            <h2 id="home-text-h2">We are a full service renovation company</h2>
+            <h3>Licensed, bonded and insured with over 15 years of experience.</h3>
+        </div>
+        <div id="contact-form-wrapper">
+            <div id="contact-form">
+                <h2>Get a free estimate</h2>
+                <form action="" method="post">
+                    <div id="contact-form-input-wrapper">
+                        <input class="contact-input" type="text" name="name" placeholder="Name" required/>
+                        <input class="contact-input" type="email" name="email" placeholder="Email" required/>
+                        <input class="contact-input" type="tel" name="phone" placeholder="Phone" required/>
+                        <textarea class="contact-input" rows="5" name="message" placeholder="Message"
+                                  required></textarea>
+                        <br>
+                        <input class="submit-button pt-20" type="submit" value="SUBMIT NOW"/>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div id="about-wrapper">
+        <div id="about-img">
+            <img src="images/about-company.jpg" alt="About Image"/>
+        </div>
+        <div id="about-text">
+            <h3>Welcome to</h3>
+            <h1>HILLCREST RENOVATION, LLC</h1>
+            <p>At HillCrest, we provide top quality home improvement services through many years of experience.
+                We strive to provide the best costumer service along with a priceless quality. Let us help you with your
+                project in a professional and timely manner.</p>
+            <ul>
+                <li>Full kitchen renovation.</li>
+                <li>Full bathroom renovation.</li>
+                <li>All types of flooring: hardwood, tile, LVP...</li>
+                <li>Water damage restoration.</li>
+                <li>And more...</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="services">
+    <h1>Our Services</h1>
+    <hr class="short-hr">
+    <p>We provide all types of home renovations, no matter how big or small. We have you covered.</p>
+    <div id="services-wrapper">
+        <div id="services-container">
+            <div class="service">
+                <img src="images/kitchen-renovation-thumbnail.webp" alt="Kitchen Renovation"/>
+                <h1>Kitchen Renovation</h1>
+                <p>Full kitchen renovation with high quality materials at a great price.</p>
+            </div>
+            <div class="service">
+                <img src="images/bathroom-renovation-thumbnail.webp" alt="Bathroom Renovation"/>
+                <h1>Bathroom Renovation</h1>
+                <p>Anything from bathtub surround tiling, reglazing, tub to walk in shower conversation... we do it
+                    all!</p>
+            </div>
+            <div class="service">
+                <img src="images/restoration-thumbnail.webp" alt="Restoration"/>
+                <h1>Restoration</h1>
+                <p>Water damage? Mold? We can help restore your home by dealing with your insurance company.</p>
+            </div>
+            <div class="service">
+                <img src="images/renovation-thumbnail.webp" alt="Water Renovation"/>
+                <h1>Renovation</h1>
+                <p>We can undertake full house renovation to create your dream space.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="testimonials">
+    <h1>Testimonials</h1>
+    <hr class="short-hr">
+    <p>See what our clients are saying!</p>
+    <div id="testimonials-wrapper">
+        <div id="testimonials-container">
+            <div class="testimonial active">
+                <p>"Sol took on a project on short notice and it came out great! Good communication, recognized issues
+                    before they became problems, finished the job on a quick timeline. Highly recommended!"</p>
+                <h1>Tanner J.</h1>
+                <h2>Lynnwood, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"Sol and his dad are phenomenal!! They did an incredible job on a very challenging situation. They
+                    not only fixed out issue but made our rooms awesome. Sol answered all our questions in a timely
+                    matter and was very honest. We would totally hire them again. Thanks Sol and Dad for all your help.
+                    I have one less headache in my life!!!"</p>
+                <h1>Liliana O.</h1>
+                <h2>Kirkland, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"Where do I even begin?! Reasonably priced, fast, extremely professional and goes above and beyond to
+                    make your experience as worry-free as possible. Extremely respectful and makes sure you're both on
+                    the same page in order to move forward with the project. Honest to the bone! If they can't do
+                    something or feel unsure they will let you know and ask you how you would like to proceed. Honestly
+                    working with Sol was amazing and I wish there were more people like him!
+                    Thank you guys for such an incredible experience and impecable work! You have my business for
+                    life!"</p>
+                <h1>Alejandra S.</h1>
+                <h2>Renton, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"Sol did a great job for us. He is very professional, friendly and knows what he is doing. He
+                    communicates very well too so the process was very smooth. He also didn't mind offering a little
+                    extra help for some repairs. The job is of great quality and we will surely hire him again."</p>
+                <h1>Yushu C.</h1>
+                <h2>Bellevue, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"The work they did to fix several issues discovered during a simple project was very good. Father son
+                    duo - hard-working, timely and honest."</p>
+                <h1>Saumil G.</h1>
+                <h2>Sammamish, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"Job was done in a timely and cost effective manner. Professional, quality work and I would not
+                    hesitate to hire them again."</p>
+                <h1>George M.</h1>
+                <h2>Seattle, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"Sol was excellent, helped me make the most economical choices during a stressful repair situation, I
+                    will never use another contractor again."</p>
+                <h1>Allyson M.</h1>
+                <h2>Seattle, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"I hired Sol to install hardwood floors for me. They were punctual,clean and did a great job with the
+                    installation. They were very professional and took care of everything as discussed. If I had any
+                    questions, he was always available and took time to explain everything I needed to know. I highly
+                    recommend them and would trust them with any other job in the future!"</p>
+                <h1>Brad R.</h1>
+                <h2>Seattle, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"Sol and his father showed up on time, communicated clearly, and were honest and open about
+                    unexpected changes/work they encountered along the way. They completed repairing the frame of our
+                    front door on time, and we're happy with the results. My wife and I would happily hire him again and
+                    we're looking forward to doing so."</p>
+                <h1>Amir K.</h1>
+                <h2>Seattle, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"It was great working with HillCrest Renovations. The owner, Sol, is professional and obviously
+                    experienced. I could tell his team was hired carefully because they worked together like family.
+                    They replaced a collapsed overhang on my house in a very timely manner. There was open and friendly
+                    communication throughout the job. When the time comes, I will be calling them back for any other
+                    work I might have. I would recommend HillCrest to anyone."</p>
+                <h1>Mike D.</h1>
+                <h2>Renton, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"I’m thrilled with the results of my bathroom remodel!"</p>
+                <h1>Rosalind B.</h1>
+                <h2>Seattle, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"Sol was great. He completed the project on time and it looks great. I would recommend him
+                    highly."</p>
+                <h1>Jerry G.</h1>
+                <h2>Kirkland, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"We hired them to redo our stairs and install handrails. They clearly communicated how they will
+                    proceed with the project and did as what they said. There were a couple of stairs that needed
+                    additional work. They brought it to our attention and gave us a reasonable price to take care of the
+                    repairs. Other than being pleased with the outcome, what stood out the most was the fact that they
+                    cleaned up every single day after work. It was nice not to have to deal with construction debris
+                    while the stairs were being fixed."</p>
+                <h1>Mary C.</h1>
+                <h2>Bothell, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"Sol lay floor, painted my entire house including doors and trimmings, and completely remodeled my
+                    bathroom. He was meticulous and diligent in his work and straightforward with costs and
+                    expectations.
+
+                    While he worked fast and efficiently, I never felt like he was trying to cut corners. When necessary
+                    he spent more time to ensure he does the job right.."</p>
+                <h1>Serge C.</h1>
+                <h2>Bellevue, WA</h2>
+            </div>
+            <div class="testimonial">
+                <p>"Sol and his father are so knowledgeable and hard working. I love their work ethic and their love of
+                    what they do. Very professional, courteous, honest, trustworthy and thoughtful. I enjoyed seeing
+                    them everyday while they did major repairs on my deck walls, columns and beams. They also did an
+                    amazing job stripping my metal handrails and painting them. I would hire them again and refer them
+                    to friends and family. We are very happy clients, David and Tamera Duke"</p>
+                <h1>Tamera D.</h1>
+                <h2>Seattle, WA</h2>
+            </div>
+        </div>
+        <br>
+        <div id="testimonial-controller">
+            <div class="testimonial-controller active"
+                 data-testimonial="0"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="1"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="2"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="3"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="4"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="5"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="6"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="7"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="8"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="9"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="10"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="11"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="12"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="13"></div>
+            <div class="testimonial-controller"
+                 data-testimonial="14"></div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div id="footer-wrapper">
+        <div id="footer-text">
+            <p>© 2023 HillCrest Renovation, LLC | Developed by <a href="https://devmaus.com" target="_blank">DevMaus</a> | All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+<!--Typer: https://github.com/birajrai/typer-->
+<script src="js/typer.min.js"></script>
+
+<script src="js/script.min.js"></script>
 </html>
