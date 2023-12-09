@@ -520,3 +520,18 @@ input[type="submit"].submit-button {
     border-top: 3px solid #ffffff;
     margin: 0 auto;  /* Center the hr */
 }
+
+.submitted {
+    background-color: #217002 !important;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    cursor: not-allowed !important;
+}
+.form-submission-failed {
+    background-color: #8c0404 !important;
+    color: white;
+    font-size: smaller;
+    width: 100%;
+    cursor: not-allowed !important;
+}

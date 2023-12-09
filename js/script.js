@@ -1,5 +1,5 @@
 
-//get main nav and check if scroll is greater than 10px then add class
+emailjs.init("qOTfPgt-H2dhdPycA");
 
 // get navbar
 const mainNav = document.getElementById("nav-wrapper")
@@ -7,6 +7,9 @@ const navLinks = document.getElementsByClassName("nav-link")
 const logoImg = document.getElementById("logo-img")
 const testimonials = document.getElementsByClassName("testimonial")
 const testimonialControllers = document.getElementsByClassName("testimonial-controller")
+const contactForm = document.getElementById("contact-form-form")
+const contactFormSubmitButton = document.getElementById("contact-form-submit-btn")
+
 const testimonialIntervalTimeout = 5000;
 let testimonialIndex = 0;
 let intervalId
@@ -67,8 +70,26 @@ for (const testimonialController of testimonialControllers) {
     });
 }
 
-startTestimonialInterval();
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    emailjs.sendForm('service_0d4mtpo', 'template_bl1zflg', '#contact-form-form')
+        .then(function(response) {
+            contactFormSubmitButton.classList.add('submitted');
+            contactFormSubmitButton.disabled = true;
+            contactFormSubmitButton.value = 'Message sent!';
+            contactForm.reset();
+        }, function(error) {
+            contactFormSubmitButton.classList.add('form-submission-failed');
+            contactFormSubmitButton.value = 'Message failed!';
+            setTimeout(() => {
+                contactFormSubmitButton.classList.remove('form-submission-failed');
+                contactFormSubmitButton.value = 'Send message';
+            }, 3000);
+        });
+})
+
+startTestimonialInterval();
 
 window.addEventListener('scroll', function() {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;

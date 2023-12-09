@@ -44,15 +44,16 @@
         <div id="contact-form-wrapper">
             <div id="contact-form">
                 <h2>Get a free estimate</h2>
-                <form action="" method="post">
+                <form id="contact-form-form" method="post">
                     <div id="contact-form-input-wrapper">
                         <input class="contact-input" type="text" name="name" placeholder="Name" required/>
                         <input class="contact-input" type="email" name="email" placeholder="Email" required/>
-                        <input class="contact-input" type="tel" name="phone" placeholder="Phone" required/>
+                        <input class="contact-input" type="tel" name="phone" pattern="(\d{3}-\d{3}-\d{4}|\d{10})"
+                               placeholder="Phone" required/>
                         <textarea class="contact-input" rows="5" name="message" placeholder="Message"
                                   required></textarea>
                         <br>
-                        <input class="submit-button pt-20" type="submit" value="SUBMIT NOW"/>
+                        <input id="contact-form-submit-btn" class="submit-button pt-20" type="submit" value="SUBMIT NOW"/>
                     </div>
 
                 </form>
@@ -64,7 +65,7 @@
 <div id="about">
     <div id="about-wrapper">
         <div id="about-img">
-            <img src="images/about-company.jpg" alt="About Image"/>
+            <img src="images/about-company.webp" alt="About Image"/>
         </div>
         <div id="about-text">
             <h3>Welcome to</h3>
@@ -283,7 +284,7 @@
 
 </body>
 <!--Typer: https://github.com/birajrai/typer-->
+<script type="text/javascript" src="js/email.min.js"></script>
 <script src="js/typer.min.js"></script>
-
 <script src="js/script.min.js"></script>
 </html>
